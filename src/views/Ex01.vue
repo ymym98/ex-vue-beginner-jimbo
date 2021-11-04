@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="name">名前：神保佑美</div>
-    <div class="age">年齢：23歳</div>
-    <div class="afterAge">10年後の年齢：33歳</div>
+  <div class="main">
+    <div class="name">名前：{{ name }}</div>
+    <div class="age">年齢：{{ age }}歳</div>
+    <div class="afterAge">10年後の年齢：{{ age + 10 }}歳</div>
     <div>
       趣味：<span v-for="hobby of hobbies" v-bind:key="hobby">
         {{ hobby }}
@@ -27,12 +27,17 @@ export default class SampleComponent extends Vue {
   private hobbies = ["映画鑑賞", "犬", "カラオケ"];
   private url = "https://www.rakus-partners.co.jp/";
   private img = "img/shibadog.jpg";
+  private name = "神保佑美";
+  private age = 23;
 }
 </script>
 
 <style scoped>
-img_dog {
-  width: 300px;
-  height: 600px;
+.main {
+  border: solid;
+}
+.img_dog {
+  width: 150px;
+  height: 80px;
 }
 </style>
