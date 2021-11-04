@@ -13,7 +13,7 @@
     <br />
     <span><a v-bind:href="url">自社ページ</a></span
     ><br />
-    <div v-bind="attributes"><img v-bind:src="img" /></div>
+    <img v-bind:src="img" v-bind="attributes" />
     <button type="button" v-on:click="onclick" v-bind:disabled="canNotClick">
       ボタン
     </button>
@@ -32,6 +32,7 @@ export default class SampleComponent extends Vue {
   private url = "";
   private img = "";
   private canNotClick = false;
+  private attributes = { width: "0px", height: "0px" };
 
   onclick(): void {
     this.myName = "神保佑美";
@@ -41,15 +42,16 @@ export default class SampleComponent extends Vue {
     this.url = "https://www.rakus-partners.co.jp/";
     this.img = "img/shibadog.jpg";
     this.canNotClick = true;
+    this.attributes = { width: "100px", height: "80px" };
   }
 }
 </script>
 
 <style scoped>
-attributes {
+/* attributes {
   width: 100px;
   height: 80px;
-}
+} */
 /* img {
   width: 100px;
   height: 80px;
