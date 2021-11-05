@@ -13,7 +13,7 @@
     <br />
     <span><a v-bind:href="url">自社ページ</a></span
     ><br />
-    <img v-bind:src="img" v-bind="attributes" />
+    <img v-bind:src="img" v-bind="attributes" /><br />
     <button type="button" v-on:click="onclick" v-bind:disabled="canNotClick">
       ボタン
     </button>
@@ -28,7 +28,7 @@ export default class SampleComponent extends Vue {
   private myName = "";
   private myAge = 0;
   private afterAge = 0;
-  private hobbies = [""];
+  private hobbies = new Array<string>();
   private url = "";
   private img = "";
   private canNotClick = false;

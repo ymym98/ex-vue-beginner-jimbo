@@ -8,6 +8,7 @@
     <router-link to="/ex01.vue">Ex01</router-link>|
     <router-link to="/ex02.vue">Ex02</router-link>|
     <router-link to="/ex03.vue">Ex03</router-link>|
+    <router-link to="/ex04.vue">Ex04</router-link>|
   </div>
 </template>
 
